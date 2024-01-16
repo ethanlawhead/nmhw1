@@ -4,7 +4,7 @@ raw = user.split(',')
 num = []
 new = []
 sum = 0
-mode = {}
+mode_dic = {}
 #putting input into integer list
 for i in raw:
     num.append(i)
@@ -26,11 +26,12 @@ median = num[len(num)//2]
 
 #mode
 for i in num:
-    if i in mode:
-        mode[i] = mode[i] + 1
+    if i in mode_dic:
+        mode_dic[i] = mode_dic[i] + 1
     else:
-        mode[i] = 0
-        mode[i] = mode[i] + 1
+        mode_dic[i] = 0
+        mode_dic[i] = mode_dic[i] + 1
+mode = max(mode_dic, key = mode_dic.get)
 
 
 
@@ -38,3 +39,4 @@ for i in num:
 print("the sorted list is", num)
 print ("The mean is" , mean)
 print("The median is", median)
+print("The mode is", mode)
