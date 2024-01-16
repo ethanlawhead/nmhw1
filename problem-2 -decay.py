@@ -5,9 +5,10 @@ import math
 
 #variables
 no = 1000
+time = range(0, 4)
 lams = [0.01,0.1,1,10]
-
-plt.plot(no*math.e**(-0.01))
+numbers = no*math.e**(-0.1)
+plt.plot(time,lams)
 
 
 
