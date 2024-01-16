@@ -5,10 +5,10 @@ import math
 
 #variables
 no = 1000
-time = range(0, 4)
+time = np.linspace(0,500,50)
 lams = [0.01,0.1,1,10]
-numbers = no*math.e**(-0.1)
-plt.plot(time,lams)
+numbers = no*math.e**(-0.1*time)
+plt.plot(time,numbers)
 
 
 
