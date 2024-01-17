@@ -4,11 +4,12 @@ import math
 
 
 #variables
-no = 1000
-time = np.linspace(0,500,50)
-lams = [0.01,0.1,1,10]
-numbers = no*math.e**(-0.1*time)
-plt.plot(time,numbers)
+no = 500
+time = np.linspace(0,60,50)
+lams = [0.1,0.35,0.75,1]
+for i in lams:
+    numbers = no*math.e**(-i*time)
+    plt.plot(time,numbers)
 
 
 
