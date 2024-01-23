@@ -31,9 +31,24 @@ def eq3(vi,g,c,m,delt,t):
 
     return eqlst
 
-#function to find time for 99.99% vt
-def percent(terminal, eq2, eq3):
+def max_time(vt,c,g,m):
    print('not done yet')
+
+#function to find time for 99.99% vt
+def percent(terminal, eq, time):
+   ninety_nine = .9999 * terminal
+   print(ninety_nine)
+   check = False
+   while  check == False:
+        for i in eq:
+            if i >= ninety_nine:
+                check = True
+                j = list(eq).index(i)
+                print(time[j])
+                break
+            else:
+                continue
+
    
 
 #part a
@@ -50,7 +65,10 @@ y_valeq3 = eq3(0,g,c,m1,delt,time2)
 
 #part d
 y_vald = eq3(0,g,c,m2,delt,time2)
-print(y_vald)
+
+
+#part e
+percent(va,v2,time)
 
 #plotting
 plt.plot(time,v2, label = 'part a')
