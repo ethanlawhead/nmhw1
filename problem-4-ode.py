@@ -31,20 +31,24 @@ def eq3(vi,g,c,m,delt,t):
 
     return eqlst
 
-def max_time(vt,c,g,m):
+def max_time(vt,eq,delt):
    print('not done yet')
 
 #function to find time for 99.99% vt
 def percent(terminal, eq, time):
+   
+   #find 99.99% of terminal velocity
    ninety_nine = .9999 * terminal
-   print(ninety_nine)
+
    check = False
+
+   #go through equation to find value and return time
    while  check == False:
         for i in eq:
             if i >= ninety_nine:
                 check = True
                 j = list(eq).index(i)
-                print(time[j])
+                print('it takes' , time[j] , 'seconds')
                 break
             else:
                 continue
@@ -61,11 +65,11 @@ v2 = va*(1-math.e**(-(c/m1)*time))
 y_valeq3 = eq3(0,g,c,m1,delt,time2)
 
 #part c
-
+max_time
 
 #part d
 y_vald = eq3(0,g,c,m2,delt,time2)
-
+max_time
 
 #part e
 percent(va,v2,time)
