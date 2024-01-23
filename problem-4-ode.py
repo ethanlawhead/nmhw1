@@ -31,8 +31,13 @@ def eq3(vi,g,c,m,delt,t):
 
     return eqlst
 
-def max_time(vt,eq,delt):
-   print('not done yet')
+def accuracy(eq_test,eq_true, time):
+   for i in eq_test:
+       per = i/eq_true[list(eq_test).index(i)]
+       print(i)
+       print(eq_true[list(eq_test).index(i)])
+       print(time[list(eq_test).index(i)])
+       print(per, '\n')
 
 #function to find time for 99.99% vt
 def percent(terminal, eq, time):
@@ -65,11 +70,11 @@ v2 = va*(1-math.e**(-(c/m1)*time))
 y_valeq3 = eq3(0,g,c,m1,delt,time2)
 
 #part c
-max_time
+accuracy(y_valeq3,v2,time2)
 
 #part d
 y_vald = eq3(0,g,c,m2,delt,time2)
-max_time
+#accuracy
 
 #part e
 percent(va,v2,time)
