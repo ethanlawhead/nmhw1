@@ -13,7 +13,7 @@ for i in raw:
 #sorting
 for i in range(0, len(num)):
     for j in range(i +1 , len(num)):
-        if num[i] >= num[j]:
+        if int(num[i]) >= int(num[j]):
             num[i], num[j] = num[j] , num[i]
         
 #mean
