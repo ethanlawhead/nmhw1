@@ -32,7 +32,8 @@ for i in num:
         mode_dic[i] = 0
         mode_dic[i] = mode_dic[i] + 1
 mode = max(mode_dic, key = mode_dic.get)
-
+if int(mode_dic[mode]) <= 1:
+    mode = "n/a"
 
 
 
