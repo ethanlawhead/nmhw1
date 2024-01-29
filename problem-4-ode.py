@@ -37,7 +37,7 @@ def accuracy(eq_test,eq_true, time):
     #    print(i)
     #    print(eq_true[list(eq_test).index(i)])
     #    print(time[list(eq_test).index(i)])
-       print(per, '\n')
+    #   print(per, '\n')
 
 #function to find time for 99.99% vt
 def percent(terminal, eq, time):
